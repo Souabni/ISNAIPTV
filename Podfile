@@ -6,7 +6,7 @@ target 'ISNAIPTV' do
   # use_frameworks!
 
   # Pods for ISNAIPTV
-  platform :ios, '8.4'
+  platform :ios, '11'
   pod ‘MobileVLCKit’
 
 end

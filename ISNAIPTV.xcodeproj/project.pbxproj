@@ -38,9 +38,9 @@
 		D76B958629F5A40100FA87CF /* LiveTVCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B956C29F5A40100FA87CF /* LiveTVCategory.swift */; };
 		D76B958729F5A40100FA87CF /* LiveTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B956D29F5A40100FA87CF /* LiveTV.swift */; };
 		D76B958829F5A40100FA87CF /* tvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B956E29F5A40100FA87CF /* tvView.swift */; };
-		D76B958B29F5A47800FA87CF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D76B958A29F5A47800FA87CF /* Kingfisher */; };
-		D76B958E29F5A4C400FA87CF /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = D76B958D29F5A4C400FA87CF /* Introspect */; };
 		D76B959129F5A55200FA87CF /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B959029F5A55200FA87CF /* NavigationBar.swift */; };
+		D79D1BA429F5BDF4005501FC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D79D1BA329F5BDF4005501FC /* Kingfisher */; };
+		D79D1BA729F5BE01005501FC /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = D79D1BA629F5BE01005501FC /* Introspect */; };
 		D7A50DB229F1565800A9F6F2 /* ISNAIPTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A50DB129F1565800A9F6F2 /* ISNAIPTVApp.swift */; };
 		D7A50DB429F1565800A9F6F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A50DB329F1565800A9F6F2 /* ContentView.swift */; };
 		D7A50DB629F1565A00A9F6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A50DB529F1565A00A9F6F2 /* Assets.xcassets */; };
@@ -167,8 +167,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76B958B29F5A47800FA87CF /* Kingfisher in Frameworks */,
-				D76B958E29F5A4C400FA87CF /* Introspect in Frameworks */,
+				D79D1BA429F5BDF4005501FC /* Kingfisher in Frameworks */,
+				D79D1BA729F5BE01005501FC /* Introspect in Frameworks */,
 				C26765DA1CF7FE72729FCCD3 /* libPods-ISNAIPTV.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,8 +353,7 @@
 				D7A50DD429F1583900A9F6F2 /* LiveTV */,
 				D7A50DD629F1583900A9F6F2 /* Category.swift */,
 			);
-			name = "Xtream Client";
-			path = "../../../../Documents/iOS Apps/SIPTV V1/Xtream Client";
+			path = "Xtream Client";
 			sourceTree = "<group>";
 		};
 		D7A50DCB29F1583900A9F6F2 /* Series */ = {
@@ -454,8 +453,8 @@
 			);
 			name = ISNAIPTV;
 			packageProductDependencies = (
-				D76B958A29F5A47800FA87CF /* Kingfisher */,
-				D76B958D29F5A4C400FA87CF /* Introspect */,
+				D79D1BA329F5BDF4005501FC /* Kingfisher */,
+				D79D1BA629F5BE01005501FC /* Introspect */,
 			);
 			productName = ISNAIPTV;
 			productReference = D7A50DAE29F1565800A9F6F2 /* ISNAIPTV.app */;
@@ -486,8 +485,8 @@
 			);
 			mainGroup = D7A50DA529F1565800A9F6F2;
 			packageReferences = (
-				D76B958929F5A47800FA87CF /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				D76B958C29F5A4C400FA87CF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				D79D1BA229F5BDF4005501FC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D79D1BA529F5BE01005501FC /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = D7A50DAF29F1565800A9F6F2 /* Products */;
 			projectDirPath = "";
@@ -832,7 +831,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D76B958929F5A47800FA87CF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		D79D1BA229F5BDF4005501FC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
@@ -840,7 +839,7 @@
 				kind = branch;
 			};
 		};
-		D76B958C29F5A4C400FA87CF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+		D79D1BA529F5BE01005501FC /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
 			requirement = {
@@ -851,14 +850,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D76B958A29F5A47800FA87CF /* Kingfisher */ = {
+		D79D1BA329F5BDF4005501FC /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D76B958929F5A47800FA87CF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = D79D1BA229F5BDF4005501FC /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		D76B958D29F5A4C400FA87CF /* Introspect */ = {
+		D79D1BA629F5BE01005501FC /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D76B958C29F5A4C400FA87CF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			package = D79D1BA529F5BE01005501FC /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
