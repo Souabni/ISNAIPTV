@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C26765DA1CF7FE72729FCCD3 /* libPods-ISNAIPTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C806D9DD24F1F308FBB07A /* libPods-ISNAIPTV.a */; };
 		D76B954629F5974800FA87CF /* XtreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B954529F5974800FA87CF /* XtreamManager.swift */; };
-		D76B954829F59C1000FA87CF /* XtreamConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B954729F59C1000FA87CF /* XtreamConfig.swift */; };
 		D76B954D29F5A3C700FA87CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B954B29F5A3C700FA87CF /* MainView.swift */; };
 		D76B954E29F5A3C700FA87CF /* SectionsBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B954C29F5A3C700FA87CF /* SectionsBarView.swift */; };
 		D76B956F29F5A40100FA87CF /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B955029F5A40000FA87CF /* VideoPlayerView.swift */; };
@@ -88,7 +87,6 @@
 		66E0BFE65C98082BEBB54DEC /* Pods-ISNAIPTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISNAIPTV.release.xcconfig"; path = "Target Support Files/Pods-ISNAIPTV/Pods-ISNAIPTV.release.xcconfig"; sourceTree = "<group>"; };
 		D2C806D9DD24F1F308FBB07A /* libPods-ISNAIPTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ISNAIPTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76B954529F5974800FA87CF /* XtreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamManager.swift; sourceTree = "<group>"; };
-		D76B954729F59C1000FA87CF /* XtreamConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamConfig.swift; sourceTree = "<group>"; };
 		D76B954B29F5A3C700FA87CF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D76B954C29F5A3C700FA87CF /* SectionsBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsBarView.swift; sourceTree = "<group>"; };
 		D76B955029F5A40000FA87CF /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 		D7A50DA529F1565800A9F6F2 = {
 			isa = PBXGroup;
 			children = (
-				D76B954729F59C1000FA87CF /* XtreamConfig.swift */,
 				D7A50DB029F1565800A9F6F2 /* ISNAIPTV */,
 				D7A50DAF29F1565800A9F6F2 /* Products */,
 				18543EFC24CE5F7F5A09840C /* Pods */,
@@ -606,7 +603,6 @@
 				D76B957929F5A40100FA87CF /* SerieDetailsView.swift in Sources */,
 				D7A50DDA29F1583900A9F6F2 /* VodInfo.swift in Sources */,
 				D76B958629F5A40100FA87CF /* LiveTVCategory.swift in Sources */,
-				D76B954829F59C1000FA87CF /* XtreamConfig.swift in Sources */,
 				D7A50E0B29F15E2700A9F6F2 /* XtreamSession.swift in Sources */,
 				D7A50DE129F1599E00A9F6F2 /* LaunchscreenView.swift in Sources */,
 				D7A50DDF29F1583900A9F6F2 /* Category.swift in Sources */,
