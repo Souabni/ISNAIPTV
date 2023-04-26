@@ -24,7 +24,8 @@ struct SerieCategoryView: View {
             contentView
         }
         .padding(.vertical,12)
-        .background(index % 2 == 1 ? Color.getLightColor(index: index/2) : Color.clear)
+        //.background(index % 2 == 1 ? Color.getLightColor(index: index/2) : Color.clear)
+        .background(Color.clear)
     }
     
     var headerView: some View {
@@ -36,7 +37,7 @@ struct SerieCategoryView: View {
                 HStack(spacing:4){
                 
                     Text(category.title.uppercased())
-                        .font(.custom(RobotoFont.bold.rawValue, size: 14))
+                        .font(.custom(RobotoFont.bold.rawValue, size: 20))
                     
                     Image("right-arrow")
                         .resizable()
@@ -46,8 +47,8 @@ struct SerieCategoryView: View {
                 }
                   
             }
-       //     .foregroundColor(Color.black)
-            .foregroundColor(index % 2 == 1 ?  Color.black : Color.white)
+            .foregroundColor(Color.white)
+            //.foregroundColor(index % 2 == 1 ?  Color.black : Color.white)
             Spacer()
         }
     }
@@ -63,7 +64,7 @@ struct SerieCategoryView: View {
                         }
                     } label:{
                         SerieCell(serie:serie)
-                            .frame(width: 100, height: 150)
+                            .frame(width: 200, height: 300)
                             .clipped()
                             .cornerRadius(5)
                     }

@@ -23,7 +23,8 @@ struct MovieCategoryView: View {
             contentView
         }
         .padding(.vertical,12)
-        .background(index % 2 == 1 ? Color.getLightColor(index: index/2) : Color.clear)
+        .background(Color.clear)
+       // .background(index % 2 == 1 ? Color.getLightColor(index: index/2) : Color.clear)
     }
     
     var headerView: some View {
@@ -36,7 +37,7 @@ struct MovieCategoryView: View {
                 HStack(spacing:4){
                 
                     Text(category.title.uppercased())
-                        .font(.custom(RobotoFont.bold.rawValue, size: 14))
+                        .font(.custom(RobotoFont.bold.rawValue, size: 20))
                     
                     Image("right-arrow")
                         .resizable()
@@ -48,8 +49,8 @@ struct MovieCategoryView: View {
             }
             Spacer()
         }
-        .foregroundColor(index % 2 == 1 ?  Color.black : Color.white)
-       // .foregroundColor(Color.black)
+       // .foregroundColor(index % 2 == 1 ?  Color.black : Color.white)
+        .foregroundColor(Color.white)
     }
     
     var contentView: some View{
@@ -63,7 +64,7 @@ struct MovieCategoryView: View {
                         }
                     } label:{
                         MovieCell(movie:movie)
-                            .frame(width: 100, height: 150)
+                            .frame(width: 200, height: 300)
                             .cornerRadius(5)
                     }
                     .padding(.leading,8)
