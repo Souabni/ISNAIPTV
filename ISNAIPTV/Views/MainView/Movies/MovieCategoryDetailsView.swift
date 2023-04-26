@@ -38,6 +38,9 @@ struct MovieCategoryDetailsView: View {
                     
                     ScrollView{
                         let gridItemLayout = [GridItem(.flexible(minimum: 150)),
+                                              GridItem(.flexible(minimum: 150)),
+                                              GridItem(.flexible(minimum: 150)),
+                                              GridItem(.flexible(minimum: 150)),
                                               GridItem(.flexible(minimum: 150))]
                         LazyVGrid(columns:gridItemLayout, spacing: 30){
                             ForEach(category.movies,id:\.name){ movie in
@@ -46,7 +49,7 @@ struct MovieCategoryDetailsView: View {
                                     displayMovie = true
                                 } label:{
                                     MovieCell(movie: movie)
-                                        .frame(width: 150, height: 225)
+                                        .frame(width: 200, height: 300)
                                 }
                             }
                         }

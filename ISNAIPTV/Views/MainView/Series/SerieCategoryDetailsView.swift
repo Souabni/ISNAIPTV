@@ -38,6 +38,9 @@ struct SerieCategoryDetailsView: View {
                     
                     ScrollView{
                         let gridItemLayout = [GridItem(.flexible(minimum: 150)),
+                                              GridItem(.flexible(minimum: 150)),
+                                              GridItem(.flexible(minimum: 150)),
+                                              GridItem(.flexible(minimum: 150)),
                                               GridItem(.flexible(minimum: 150))]
                         LazyVGrid(columns:gridItemLayout, spacing: 30){
                             ForEach(category.series,id:\.name){ serie in
@@ -46,7 +49,7 @@ struct SerieCategoryDetailsView: View {
                                     displaySerie = true
                                 } label:{
                                     SerieCell(serie: serie)
-                                        .frame(width: 150, height: 225)
+                                        .frame(width: 200, height: 300)
                                         .clipped()
                                 }
                             }

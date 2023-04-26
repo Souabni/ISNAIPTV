@@ -27,7 +27,7 @@ struct NavigationBar: View {
             }
             Spacer()
             Text(title)
-                .font(.custom(RobotoFont.bold.rawValue, size: 18))
+                .font(.custom(RobotoFont.bold.rawValue, size: 24))
             
             Spacer()
         }
