@@ -19,10 +19,7 @@ class XtreamRepository: ObservableObject{
     
     
     
-    @Published var currentProfil: Profil = Profil(title: XtreamConfig().name,
-                                                  link: XtreamConfig().url,
-                                                  userName: XtreamConfig().username,
-                                                  password: XtreamConfig().password)
+   
     
     
     private init() {
@@ -39,7 +36,6 @@ class XtreamRepository: ObservableObject{
     
     func add(profil: Profil){
         profils.append(profil)
-        currentProfil = profil
         //Storing Items
         if let encoded = try? JSONEncoder().encode(profils) {
             UserDefaults.standard.set(encoded, forKey: "profils")
@@ -54,8 +50,4 @@ class XtreamRepository: ObservableObject{
         }
     }
     
-    func getCurrentProfil()->Profil?{
-        
-        return currentProfil
-    }
 }  

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AppView: View {
     @StateObject var navigationManager = NavigationManager()
-    let xtreamRepository = XtreamRepository.sharedInstance
     
     var body: some View {
         Group{
@@ -29,7 +28,7 @@ struct AppView: View {
         
         }
         .onAppear {
-            guard let _ = xtreamRepository.getCurrentProfil() else{
+            guard let _ = XtreamManager.sharedInstance.currentProfil else{
                 navigationManager.navigationSection = .loginView
                 return
             }

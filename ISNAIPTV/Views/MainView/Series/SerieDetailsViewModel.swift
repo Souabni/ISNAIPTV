@@ -23,12 +23,12 @@ class SerieDetailsViewModel: ObservableObject{
     }
     
     func getSerieInfo(){
-//        XtreamRepository.shared.currentSession.xtreamAgent.getSeriesInfo(seriesID: selectedSerie.serieID) { serieInfo in
-//            DispatchQueue.main.async {
-//            print(serieInfo)
-//            self.selectedSerie.set(info: serieInfo)
-//            self.objectWillChange.send()
-//            }
-//        }
+        XtreamManager.sharedInstance.xtreamSession.xtreamAgent.getSeriesInfo(seriesID: selectedSerie.serieID) { serieInfo in
+            DispatchQueue.main.async {
+            print(serieInfo)
+            self.selectedSerie.set(info: serieInfo)
+            self.objectWillChange.send()
+            }
+        }
     }
 }
