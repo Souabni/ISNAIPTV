@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AE7BF1F29FA8A9500BD9471 /* XtreamConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7BF1E29FA8A9500BD9471 /* XtreamConfig.swift */; };
 		C26765DA1CF7FE72729FCCD3 /* libPods-ISNAIPTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C806D9DD24F1F308FBB07A /* libPods-ISNAIPTV.a */; };
 		D76B954629F5974800FA87CF /* XtreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B954529F5974800FA87CF /* XtreamManager.swift */; };
 		D76B954D29F5A3C700FA87CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B954B29F5A3C700FA87CF /* MainView.swift */; };
@@ -40,7 +41,6 @@
 		D76B959129F5A55200FA87CF /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B959029F5A55200FA87CF /* NavigationBar.swift */; };
 		D79D1BA429F5BDF4005501FC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D79D1BA329F5BDF4005501FC /* Kingfisher */; };
 		D79D1BA729F5BE01005501FC /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = D79D1BA629F5BE01005501FC /* Introspect */; };
-		D79D1BA929F5BEBA005501FC /* XtreamConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79D1BA829F5BEBA005501FC /* XtreamConfig.swift */; };
 		D7A50DB229F1565800A9F6F2 /* ISNAIPTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A50DB129F1565800A9F6F2 /* ISNAIPTVApp.swift */; };
 		D7A50DB429F1565800A9F6F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A50DB329F1565800A9F6F2 /* ContentView.swift */; };
 		D7A50DB629F1565A00A9F6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A50DB529F1565A00A9F6F2 /* Assets.xcassets */; };
@@ -85,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		3042968C1DD6C9FFA9D4BCE7 /* Pods-ISNAIPTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISNAIPTV.debug.xcconfig"; path = "Target Support Files/Pods-ISNAIPTV/Pods-ISNAIPTV.debug.xcconfig"; sourceTree = "<group>"; };
+		3AE7BF1E29FA8A9500BD9471 /* XtreamConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XtreamConfig.swift; sourceTree = "<group>"; };
 		66E0BFE65C98082BEBB54DEC /* Pods-ISNAIPTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISNAIPTV.release.xcconfig"; path = "Target Support Files/Pods-ISNAIPTV/Pods-ISNAIPTV.release.xcconfig"; sourceTree = "<group>"; };
 		D2C806D9DD24F1F308FBB07A /* libPods-ISNAIPTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ISNAIPTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76B954529F5974800FA87CF /* XtreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamManager.swift; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		D76B956D29F5A40100FA87CF /* LiveTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTV.swift; sourceTree = "<group>"; };
 		D76B956E29F5A40100FA87CF /* tvView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvView.swift; sourceTree = "<group>"; };
 		D76B959029F5A55200FA87CF /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		D79D1BA829F5BEBA005501FC /* XtreamConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XtreamConfig.swift; sourceTree = "<group>"; };
 		D7A50DAE29F1565800A9F6F2 /* ISNAIPTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISNAIPTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A50DB129F1565800A9F6F2 /* ISNAIPTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISNAIPTVApp.swift; sourceTree = "<group>"; };
 		D7A50DB329F1565800A9F6F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -209,9 +209,9 @@
 			children = (
 				D76B954B29F5A3C700FA87CF /* MainView.swift */,
 				D76B954C29F5A3C700FA87CF /* SectionsBarView.swift */,
-				D76B956829F5A40100FA87CF /* LiveTvs */,
 				D76B954F29F5A40000FA87CF /* Movies */,
 				D76B955A29F5A40100FA87CF /* Series */,
+				D76B956829F5A40100FA87CF /* LiveTvs */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -219,14 +219,14 @@
 		D76B954F29F5A40000FA87CF /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				D76B955029F5A40000FA87CF /* VideoPlayerView.swift */,
-				D76B955129F5A40000FA87CF /* MovieCell.swift */,
-				D76B955229F5A40000FA87CF /* MovieCategoryDetailsView.swift */,
-				D76B955329F5A40000FA87CF /* LiveVideoPlayerView.swift */,
 				D76B955429F5A40000FA87CF /* Model */,
-				D76B955729F5A40000FA87CF /* MovieDetailsView.swift */,
+				D76B955029F5A40000FA87CF /* VideoPlayerView.swift */,
 				D76B955829F5A40000FA87CF /* MoviesView.swift */,
 				D76B955929F5A40000FA87CF /* MovieCategoryView.swift */,
+				D76B955129F5A40000FA87CF /* MovieCell.swift */,
+				D76B955229F5A40000FA87CF /* MovieCategoryDetailsView.swift */,
+				D76B955729F5A40000FA87CF /* MovieDetailsView.swift */,
+				D76B955329F5A40000FA87CF /* LiveVideoPlayerView.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -243,12 +243,12 @@
 		D76B955A29F5A40100FA87CF /* Series */ = {
 			isa = PBXGroup;
 			children = (
-				D76B955B29F5A40100FA87CF /* SeasonView.swift */,
-				D76B955C29F5A40100FA87CF /* SerieDetailsView.swift */,
 				D76B955D29F5A40100FA87CF /* SerieCategoryView.swift */,
-				D76B955E29F5A40100FA87CF /* SerieDetailsViewModel.swift */,
-				D76B955F29F5A40100FA87CF /* SerieCell.swift */,
 				D76B956029F5A40100FA87CF /* SerieCategoryDetailsView.swift */,
+				D76B955C29F5A40100FA87CF /* SerieDetailsView.swift */,
+				D76B955E29F5A40100FA87CF /* SerieDetailsViewModel.swift */,
+				D76B955B29F5A40100FA87CF /* SeasonView.swift */,
+				D76B955F29F5A40100FA87CF /* SerieCell.swift */,
 				D76B956129F5A40100FA87CF /* EpisodeView.swift */,
 				D76B956229F5A40100FA87CF /* Model */,
 				D76B956729F5A40100FA87CF /* SeriesView.swift */,
@@ -298,7 +298,7 @@
 		D7A50DA529F1565800A9F6F2 = {
 			isa = PBXGroup;
 			children = (
-				D79D1BA829F5BEBA005501FC /* XtreamConfig.swift */,
+				3AE7BF1E29FA8A9500BD9471 /* XtreamConfig.swift */,
 				D7A50DB029F1565800A9F6F2 /* ISNAIPTV */,
 				D7A50DAF29F1565800A9F6F2 /* Products */,
 				18543EFC24CE5F7F5A09840C /* Pods */,
@@ -319,9 +319,9 @@
 			children = (
 				D7A50DB129F1565800A9F6F2 /* ISNAIPTVApp.swift */,
 				D7A50E0F29F1625300A9F6F2 /* AppView.swift */,
-				D76B954929F5A27300FA87CF /* Views */,
-				D7A50E0829F15E2600A9F6F2 /* Model */,
 				D7A50DCA29F1583900A9F6F2 /* Xtream Client */,
+				D7A50E0829F15E2600A9F6F2 /* Model */,
+				D76B954929F5A27300FA87CF /* Views */,
 				D7A50DE229F15AB600A9F6F2 /* Resources */,
 				D7A50DB529F1565A00A9F6F2 /* Assets.xcassets */,
 				D7A50DBA29F1565A00A9F6F2 /* Persistence.swift */,
@@ -620,7 +620,7 @@
 				D7A50DD729F1583900A9F6F2 /* SeriesStream.swift in Sources */,
 				D7A50DDE29F1583900A9F6F2 /* LiveStream.swift in Sources */,
 				D76B958529F5A40100FA87CF /* LiveTVView.swift in Sources */,
-				D79D1BA929F5BEBA005501FC /* XtreamConfig.swift in Sources */,
+				3AE7BF1F29FA8A9500BD9471 /* XtreamConfig.swift in Sources */,
 				D76B957529F5A40100FA87CF /* MovieDetailsView.swift in Sources */,
 				D76B956F29F5A40100FA87CF /* VideoPlayerView.swift in Sources */,
 				D76B958129F5A40100FA87CF /* Serie.swift in Sources */,
@@ -763,6 +763,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -794,6 +795,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

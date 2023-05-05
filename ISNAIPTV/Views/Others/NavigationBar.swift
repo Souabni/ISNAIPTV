@@ -14,24 +14,27 @@ struct NavigationBar: View {
     var body: some View {
         VStack{
             Spacer()
-                .frame(height: 40)
-        HStack{
-            Button{
-                prevAction()
-            } label:{
-                Image("prev")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height:30)
+                .frame(height: 20)
+            HStack{
+                Button{
+                    prevAction()
+                } label:{
+                    Image("prev")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height:30)
                     
+                }
+                Spacer()
+                Text(title)
+                    .font(.custom(RobotoFont.bold.rawValue, size: 24))
+
+                Spacer()
             }
+            .foregroundColor(Color.white)
             Spacer()
-            Text(title)
-                .font(.custom(RobotoFont.bold.rawValue, size: 24))
-            
-            Spacer()
-        }
-        .foregroundColor(Color.white)
+                .frame(height: 20)
+
         }
     }
 }
