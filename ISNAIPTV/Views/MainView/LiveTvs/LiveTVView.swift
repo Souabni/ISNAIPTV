@@ -11,74 +11,81 @@ struct LiveTVView: View {
     @EnvironmentObject var currentSession : XtreamSession
     @StateObject var LiveTVVM : LiveTVViewModel =  LiveTVViewModel()
     @State var selectedCategoryIndex = 0
-   
+    
     
     var body: some View {
-        VStack{
-           
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing:16){
-                    ForEach(Array(zip(currentSession.liveTVsCategories.indices, currentSession.liveTVsCategories)), id: \.0) {index, category in
+        GeometryReader{ geometry in
+            HStack{
+                
+                ScrollView(.vertical, showsIndicators: false){
+                    VStack(spacing:16){
+                        ForEach(Array(zip(currentSession.liveTVsCategories.indices, currentSession.liveTVsCategories)), id: \.0) {index, category in
+                          
                             Button{
                                 LiveTVVM.selectedCategory = category
                                 selectedCategoryIndex = index
                             } label:{
-                                Text(category.title)
-                                    .font(.custom(RobotoFont.bold.rawValue, size: 14))
-                                    .foregroundColor(Color.black)
-                                    .padding(.vertical,4)
-                                    .padding(.horizontal,8)
-                                    .frame(minWidth:100)
-                                    .background(Color.getLightColor(index: index))
-                                    .cornerRadius(.infinity)
+                                Text(category.title.uppercased())
+                                    .font(.custom(RobotoFont.bold.rawValue, size: 20))
                             }
-                        }
-                }
-                .padding(.horizontal, 16)
-                .frame(height: 30)
-            }
-            .frame(height: 30)
-            .background(Color.clear)
-            .padding(.top,50)
-            
-            if  let selectedCategory = LiveTVVM.selectedCategory{
-                ScrollView{
-                  //  GeometryReader { geometry in
-                    VStack{
-                        let gridItemLayout = [GridItem(.flexible(minimum: 150))]
-                        LazyVGrid(columns:gridItemLayout, spacing: 30){
-                            ForEach(selectedCategory.tvs,id:\.num){tv in
-                                Button{
-                                    LiveTVVM.selectedTV = tv
-                                    LiveTVVM.displayTV = true
-                                } label:{
-                                    tvView(liveTV: tv,color:Color.getLightColor(index: selectedCategoryIndex))
-                                }
-                            }
+                            .padding(.vertical, 15)
+                            .frame(width: 250)
+                            .foregroundColor(LiveTVVM.selectedCategory?.id == category.id ? Color.black : Color.white)
+                            .background( LiveTVVM.selectedCategory?.id == category.id ? Color.lightBlue : Color.darkBG)
+                            
                         }
                         Spacer()
                     }
-                    .padding(.vertical,16)
-                  //  }
+                    .padding(.horizontal, 16)
+                    
                 }
-                .foregroundColor(Color.white)
-                .background(Color.clear)
-                .sheet(isPresented: $LiveTVVM.displayTV ,onDismiss: {
-                  //  let value = UIInterfaceOrientation.portrait.rawValue
-                  //  UIDevice.current.setValue(value, forKey: "orientation")
-                  //  presentationMode.wrappedValue.dismiss()
-                }) {
-                    if let selectedTV = LiveTVVM.selectedTV{
-                        LiveVideoPlayerView(videoURL: "http://556677.ovh:25461/hn8rr4tp/opjmhaga/\(selectedTV.streamID)")
+                .frame(width: 250)
+                .padding(.top,50)
+                
+                
+                if  let selectedCategory = LiveTVVM.selectedCategory{
+                    ScrollView{
+                        //  GeometryReader { geometry in
+                        VStack{
+                            let gridItemLayout = [GridItem(.flexible(minimum: 150)),
+                                                  GridItem(.flexible(minimum: 150)),
+                                                  GridItem(.flexible(minimum: 150)),
+                                                  GridItem(.flexible(minimum: 150))]
+                            LazyVGrid(columns:gridItemLayout, spacing: 30){
+                                ForEach(selectedCategory.tvs,id:\.num){tv in
+                                    Button{
+                                        LiveTVVM.selectedTV = tv
+                                        LiveTVVM.displayTV = true
+                                    } label:{
+                                        TVView(liveTV: tv,color:Color.getLightColor(index: selectedCategoryIndex))
+                                    }
+                                }
+                            }
+                            Spacer()
+                        }
+                        .padding(.vertical,16)
+                        //  }
+                    }
+                    .frame(width: geometry.size.width-250)
+                    .foregroundColor(Color.white)
+                    .background(Color.clear)
+                    .sheet(isPresented: $LiveTVVM.displayTV ,onDismiss: {
+                        //  let value = UIInterfaceOrientation.portrait.rawValue
+                        //  UIDevice.current.setValue(value, forKey: "orientation")
+                        //  presentationMode.wrappedValue.dismiss()
+                    }) {
+                        if let selectedTV = LiveTVVM.selectedTV{
+                            LiveVideoPlayerView(videoURL: "http://556677.ovh:25461/hn8rr4tp/opjmhaga/\(selectedTV.streamID)")
+                        }
                     }
                 }
-            }else{
-                Spacer()
-                Text("no tvs")
-                    .foregroundColor(Color.white)
-                Spacer()
+                
             }
+            .background(Color.darkBG)
         }
-        .background(Color.darkBG)
+        .onAppear{
+            LiveTVVM.selectedCategory = currentSession.liveTVsCategories.first
+        }
+        
     }
 }

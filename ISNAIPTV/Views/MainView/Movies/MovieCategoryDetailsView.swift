@@ -65,7 +65,7 @@ struct MovieCategoryDetailsView: View {
                                     }
                                 }
                             }
-                            .frame(width:geometry.size.width)
+                            .frame(width:geometry.size.width-250)
 
                         }
                     }
