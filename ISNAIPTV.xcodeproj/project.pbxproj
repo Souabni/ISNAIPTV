@@ -220,13 +220,13 @@
 			isa = PBXGroup;
 			children = (
 				D76B955429F5A40000FA87CF /* Model */,
-				D76B955029F5A40000FA87CF /* VideoPlayerView.swift */,
 				D76B955829F5A40000FA87CF /* MoviesView.swift */,
 				D76B955929F5A40000FA87CF /* MovieCategoryView.swift */,
 				D76B955129F5A40000FA87CF /* MovieCell.swift */,
 				D76B955229F5A40000FA87CF /* MovieCategoryDetailsView.swift */,
 				D76B955729F5A40000FA87CF /* MovieDetailsView.swift */,
 				D76B955329F5A40000FA87CF /* LiveVideoPlayerView.swift */,
+				D76B955029F5A40000FA87CF /* VideoPlayerView.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
