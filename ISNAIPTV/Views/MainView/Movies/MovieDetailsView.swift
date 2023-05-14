@@ -149,7 +149,7 @@ struct MovieDetailsView: View {
                 }
             }
         }
-        .sheet(isPresented: $displayVideo,onDismiss: {
+        .fullScreenCover(isPresented: $displayVideo,onDismiss: {
             let value = UIInterfaceOrientation.portrait.rawValue
             UIDevice.current.setValue(value, forKey: "orientation")
             //presentationMode.wrappedValue.dismiss()
