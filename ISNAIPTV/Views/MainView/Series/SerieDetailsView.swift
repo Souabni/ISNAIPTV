@@ -79,22 +79,7 @@ struct SerieDetailsView: View {
                             .font(.custom(RobotoFont.regular.rawValue, size: 14))
                             .foregroundColor(Color.gray)
                         
-                        if let serieSeasons = serieDetailsVM.selectedSerie.seasons, serieSeasons.count > 1{
-                            let sections = serieSeasons.map{$0.name}
-                            SeasonView(sections:sections, selectedSection: $serieDetailsVM.selectedSection)
-                                .padding(.horizontal,-16)
-                                .background(
-                                    GeometryReader { geo -> Color in
-                                        DispatchQueue.main.async {
-                                            
-                                            sectionsBarFrame = geo.frame(in: .named("scrollView"))
-                                            
-                                        }
-                                        return Color.black
-                                    }
-                                )
-                                .opacity(sectionsBarFrame.origin.y >= 100 ? 1 : 0)
-                        }
+                    
                         
                         
                         //                                    ForEach (Array(serieDetailsVM.selectedSerie.seasons),id:\.name){season in
@@ -128,6 +113,14 @@ struct SerieDetailsView: View {
                     .padding(.horizontal,8)
                     
                 }
+                HStack{
+                    if let serieSeasons = serieDetailsVM.selectedSerie.seasons, serieSeasons.count > 1{
+                        let sections = serieSeasons.map{$0.name}
+                        SeasonView(sections:sections, selectedSection: $serieDetailsVM.selectedSection)
+                            .padding(.horizontal,-16)
+                    }
+                }
+                .frame(height: 44)
                 Spacer()
             }
             .background(Color.black)

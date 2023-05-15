@@ -15,7 +15,8 @@ struct SectionsBarView: View {
     var body: some View {
         GeometryReader { geometry in
             
-            HStack{
+            VStack{
+                Spacer()
                 Button{
                     section = .movies
                 } label:{
@@ -52,7 +53,7 @@ struct SectionsBarView: View {
                 
                 Spacer()
                 Button{
-                    navigationManager.navigationSection = .profilsView
+                  //  navigationManager.navigationSection = .profilsView
                 } label:{
                     VStack{
                         Image("profil")
@@ -61,6 +62,7 @@ struct SectionsBarView: View {
                         Text("Profils")
                     }
                 }
+                Spacer()
             }
             .padding(.horizontal,16)
             .padding(.bottom,16)

@@ -12,7 +12,11 @@ struct MainView: View {
     var body: some View {
         GeometryReader { geometry in
         NavigationView{
-            ZStack(alignment: .bottom ){
+            HStack(spacing:0){
+                SectionsBarView(section: $selectedSection)
+                    .frame( width:84)
+                    .padding(.vertical,0)
+                    .padding(.leading,0)
                 
                 switch selectedSection {
                 case .movies:
@@ -23,10 +27,7 @@ struct MainView: View {
                     LiveTVView()
                 }
                 
-                SectionsBarView(section: $selectedSection)
-                    .frame( height:84)
-                    .padding(.horizontal,0)
-                    .padding(.bottom,0)
+              
                    
             }
             .navigationBarHidden(true)

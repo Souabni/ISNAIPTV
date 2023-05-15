@@ -243,6 +243,7 @@
 		D76B955A29F5A40100FA87CF /* Series */ = {
 			isa = PBXGroup;
 			children = (
+				D76B956729F5A40100FA87CF /* SeriesView.swift */,
 				D76B955D29F5A40100FA87CF /* SerieCategoryView.swift */,
 				D76B956029F5A40100FA87CF /* SerieCategoryDetailsView.swift */,
 				D76B955C29F5A40100FA87CF /* SerieDetailsView.swift */,
@@ -251,7 +252,6 @@
 				D76B955F29F5A40100FA87CF /* SerieCell.swift */,
 				D76B956129F5A40100FA87CF /* EpisodeView.swift */,
 				D76B956229F5A40100FA87CF /* Model */,
-				D76B956729F5A40100FA87CF /* SeriesView.swift */,
 			);
 			path = Series;
 			sourceTree = "<group>";

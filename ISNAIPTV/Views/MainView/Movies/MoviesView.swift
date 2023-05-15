@@ -49,6 +49,7 @@ struct MoviesView: View {
                 }
             }
         }
+        .frame(maxWidth: .infinity)
         .background(Color.darkBG)
         .fullScreenCover(isPresented: $displayMovie) {
             if let selectedMovie = self.selectedMovie{

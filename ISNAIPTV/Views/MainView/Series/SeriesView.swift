@@ -49,6 +49,7 @@ struct SeriesView: View {
                 }
             }
         }
+        .frame(maxWidth: .infinity)
         .background(Color.darkBG)
         .fullScreenCover(isPresented: $displaySerie) {
             if let selectedSerie = self.selectedSerie{
