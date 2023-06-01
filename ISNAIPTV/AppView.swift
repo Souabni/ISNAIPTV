@@ -21,7 +21,7 @@ struct AppView: View {
             case .mainView:
                 MainView()
                     .environmentObject(navigationManager)
-                    //.environmentObject(XtreamManager.sharedInstance.xtreamSession)
+                    .environmentObject(XtreamManager.sharedInstance)
             default:
                 EmptyView()
             }

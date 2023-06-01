@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoviesView: View {
-    @EnvironmentObject var currentSession : XtreamSession
+    @EnvironmentObject var xtreamManager : XtreamManager
     
     @State private var selectedCategory : MoviesCategory?
     @State private var displaySelectedCategory : Bool = false
@@ -36,12 +36,15 @@ struct MoviesView: View {
                 Spacer()
                     .frame(height: 84)
                 let gridItemLayout = [GridItem(.flexible())]
-                LazyVGrid(columns: gridItemLayout){
-                    ForEach(Array(zip(currentSession.moviesCategories.indices, currentSession.moviesCategories)), id: \.0) { index, category in
-                        MovieCategoryView(category: category,selectedCategory: selectedCategoryBinding, selectedMovie: selectedMovieBinding,index:index)
-                            
+                if let currentSession = xtreamManager.xtreamSession {
+                    LazyVGrid(columns: gridItemLayout){
+                        ForEach(Array(zip(currentSession.moviesCategories.indices, currentSession.moviesCategories)), id: \.0) { index, category in
+                            MovieCategoryView(category: category,selectedCategory: selectedCategoryBinding, selectedMovie: selectedMovieBinding,index:index)
+
+                        }
                     }
                 }
+
                 Spacer()
                 NavigationLink(destination: MovieCategoryDetailsView(category: selectedCategory),
                                isActive: $displaySelectedCategory) {
