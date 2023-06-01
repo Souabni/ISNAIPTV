@@ -19,11 +19,11 @@ class ProfilLoadingViewModel:ObservableObject{
     private var cancellableSet: Set<AnyCancellable> = []
     
     init(){
-        XtreamManager.sharedInstance.xtreamSession.$moviesLoaded.assign(to: \.moviesLoaded, on: self)
+        XtreamManager.sharedInstance.xtreamSession?.$moviesLoaded.assign(to: \.moviesLoaded, on: self)
         .store(in: &cancellableSet)
-        XtreamManager.sharedInstance.xtreamSession.$seriesLoaded.assign(to: \.seriesLoaded, on: self)
+        XtreamManager.sharedInstance.xtreamSession?.$seriesLoaded.assign(to: \.seriesLoaded, on: self)
         .store(in: &cancellableSet)
-        XtreamManager.sharedInstance.xtreamSession.$livesLoaded.assign(to: \.liveTVsLoaded, on: self)
+        XtreamManager.sharedInstance.xtreamSession?.$livesLoaded.assign(to: \.liveTVsLoaded, on: self)
         .store(in: &cancellableSet)
         
         Publishers.CombineLatest3($moviesLoaded, $seriesLoaded, $liveTVsLoaded).receive(on: RunLoop.main).map{ (moviesLoaded, seriesLoaded, liveTVsLoaded) in
@@ -34,6 +34,6 @@ class ProfilLoadingViewModel:ObservableObject{
     }
     
     func loadSession(){
-        XtreamManager.sharedInstance.xtreamSession.loadSession()
+        XtreamManager.sharedInstance.xtreamSession?.loadSession()
     }
 }

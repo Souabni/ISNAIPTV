@@ -36,9 +36,9 @@ class XtreamSession: ObservableObject{
         seriesCategories  = []
         liveTVsCategories = []
         
-         nbLoadedMoviesCategories = 0
-         nbLoadedSeriesCategories = 0
-         nbLoadedLivesCategories = 0
+        nbLoadedMoviesCategories = 0
+        nbLoadedSeriesCategories = 0
+        nbLoadedLivesCategories = 0
         self.profil = profil
         xtreamAgent  = XtreamAgent(profil: profil)
         loadSession()

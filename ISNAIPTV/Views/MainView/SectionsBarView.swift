@@ -53,7 +53,7 @@ struct SectionsBarView: View {
                 
                 Spacer()
                 Button{
-                  //  navigationManager.navigationSection = .profilsView
+                    section = .profils
                 } label:{
                     VStack{
                         Image("profil")
@@ -80,4 +80,5 @@ enum Section{
     case movies
     case series
     case liveTV
+    case profils
 }

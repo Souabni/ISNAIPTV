@@ -41,8 +41,7 @@ struct MovieDetailsView: View {
                     
                     HStack(alignment: .center){
                         
-                        if let movieImage = selectedMovie.iconUrl, let movieImageURL = URL(string:movieImage){
-                            KFImage(movieImageURL)
+                            KFImage(URL(string:selectedMovie.iconUrl))
                                 .placeholder {
                                     Image("placeholderMovie")
                                         .resizable()
@@ -53,8 +52,7 @@ struct MovieDetailsView: View {
                                 .frame(maxWidth:.infinity)
                                 .frame(width:450,height: 600)
                             
-                        }
-                        
+                                                
                         VStack(alignment:.leading,spacing:24){
                             HStack{
                                 Text(selectedMovie.name )

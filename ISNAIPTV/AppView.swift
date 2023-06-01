@@ -21,18 +21,18 @@ struct AppView: View {
             case .mainView:
                 MainView()
                     .environmentObject(navigationManager)
-                    .environmentObject(XtreamManager.sharedInstance.xtreamSession)
+                    //.environmentObject(XtreamManager.sharedInstance.xtreamSession)
             default:
                 EmptyView()
             }
         
         }
         .onAppear {
-            guard let _ = XtreamManager.sharedInstance.currentProfil else{
+            if let xtreamSession = XtreamManager.sharedInstance.xtreamSession {
+                navigationManager.navigationSection = .profilLoading
+            } else {
                 navigationManager.navigationSection = .loginView
-                return
             }
-            navigationManager.navigationSection = .profilLoading 
         }
         
     }

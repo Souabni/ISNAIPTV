@@ -11,20 +11,21 @@ class XtreamManager: ObservableObject{
     
    public static let sharedInstance = XtreamManager()
     var xtreamRepository = XtreamRepository.sharedInstance
- 
-    
-    @Published var currentProfil: Profil? = Profil(title: XtreamConfig().name,
-                                                  link: XtreamConfig().url,
-                                                  userName: XtreamConfig().username,
-                                                  password: XtreamConfig().password)
-   
-    var xtreamSession: XtreamSession
+
+    var xtreamSession: XtreamSession?
     
     init(){
-        xtreamSession = XtreamSession(profil: Profil(title: XtreamConfig().name,
-                                                     link: XtreamConfig().url,
-                                                     userName: XtreamConfig().username,
-                                                     password: XtreamConfig().password))
+       setup()
     }
-    
+
+    func setup() {
+        let profil =  Profil(title: XtreamConfig().name,
+                             link: XtreamConfig().url,
+                             userName: XtreamConfig().username,
+                             password: XtreamConfig().password)
+        xtreamSession = XtreamSession(profil: profil)
+
+    }
+
+
 }

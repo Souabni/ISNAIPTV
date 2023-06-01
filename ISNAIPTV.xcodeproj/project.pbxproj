@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8C42D32A288DD2003AFD66 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8C42D22A288DD2003AFD66 /* Kingfisher */; };
+		3AE3689B2A1B575600F54D25 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3689A2A1B575600F54D25 /* AccountsView.swift */; };
+		3AE3689D2A1B5A2700F54D25 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3689C2A1B5A2700F54D25 /* AccountsViewModel.swift */; };
+		3AE3689F2A1B721200F54D25 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE3689E2A1B721200F54D25 /* AccountCell.swift */; };
+		3AE368A12A1BA00C00F54D25 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE368A02A1BA00C00F54D25 /* LoginView.swift */; };
 		C26765DA1CF7FE72729FCCD3 /* libPods-ISNAIPTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C806D9DD24F1F308FBB07A /* libPods-ISNAIPTV.a */; };
 		D76B954629F5974800FA87CF /* XtreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B954529F5974800FA87CF /* XtreamManager.swift */; };
 		D76B954D29F5A3C700FA87CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B954B29F5A3C700FA87CF /* MainView.swift */; };
@@ -39,7 +44,6 @@
 		D76B958829F5A40100FA87CF /* TVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B956E29F5A40100FA87CF /* TVView.swift */; };
 		D76B959129F5A55200FA87CF /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B959029F5A55200FA87CF /* NavigationBar.swift */; };
 		D77246772A097932008A1482 /* XtreamConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77246762A097932008A1482 /* XtreamConfig.swift */; };
-		D79D1BA429F5BDF4005501FC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D79D1BA329F5BDF4005501FC /* Kingfisher */; };
 		D79D1BA729F5BE01005501FC /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = D79D1BA629F5BE01005501FC /* Introspect */; };
 		D7A50DB229F1565800A9F6F2 /* ISNAIPTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A50DB129F1565800A9F6F2 /* ISNAIPTVApp.swift */; };
 		D7A50DB429F1565800A9F6F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A50DB329F1565800A9F6F2 /* ContentView.swift */; };
@@ -85,6 +89,10 @@
 
 /* Begin PBXFileReference section */
 		3042968C1DD6C9FFA9D4BCE7 /* Pods-ISNAIPTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISNAIPTV.debug.xcconfig"; path = "Target Support Files/Pods-ISNAIPTV/Pods-ISNAIPTV.debug.xcconfig"; sourceTree = "<group>"; };
+		3AE3689A2A1B575600F54D25 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		3AE3689C2A1B5A2700F54D25 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		3AE3689E2A1B721200F54D25 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		3AE368A02A1BA00C00F54D25 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		66E0BFE65C98082BEBB54DEC /* Pods-ISNAIPTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISNAIPTV.release.xcconfig"; path = "Target Support Files/Pods-ISNAIPTV/Pods-ISNAIPTV.release.xcconfig"; sourceTree = "<group>"; };
 		D2C806D9DD24F1F308FBB07A /* libPods-ISNAIPTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ISNAIPTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76B954529F5974800FA87CF /* XtreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamManager.swift; sourceTree = "<group>"; };
@@ -167,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D79D1BA429F5BDF4005501FC /* Kingfisher in Frameworks */,
+				3A8C42D32A288DD2003AFD66 /* Kingfisher in Frameworks */,
 				D79D1BA729F5BE01005501FC /* Introspect in Frameworks */,
 				C26765DA1CF7FE72729FCCD3 /* libPods-ISNAIPTV.a in Frameworks */,
 			);
@@ -183,6 +191,17 @@
 				66E0BFE65C98082BEBB54DEC /* Pods-ISNAIPTV.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3AE368992A1B574000F54D25 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				3AE3689A2A1B575600F54D25 /* AccountsView.swift */,
+				3AE3689C2A1B5A2700F54D25 /* AccountsViewModel.swift */,
+				3AE3689E2A1B721200F54D25 /* AccountCell.swift */,
+				3AE368A02A1BA00C00F54D25 /* LoginView.swift */,
+			);
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 		B45AC10AE98C6B58591686C5 /* Frameworks */ = {
@@ -207,6 +226,7 @@
 		D76B954A29F5A3B400FA87CF /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				3AE368992A1B574000F54D25 /* Accounts */,
 				D76B954B29F5A3C700FA87CF /* MainView.swift */,
 				D76B954C29F5A3C700FA87CF /* SectionsBarView.swift */,
 				D76B954F29F5A40000FA87CF /* Movies */,
@@ -453,8 +473,8 @@
 			);
 			name = ISNAIPTV;
 			packageProductDependencies = (
-				D79D1BA329F5BDF4005501FC /* Kingfisher */,
 				D79D1BA629F5BE01005501FC /* Introspect */,
+				3A8C42D22A288DD2003AFD66 /* Kingfisher */,
 			);
 			productName = ISNAIPTV;
 			productReference = D7A50DAE29F1565800A9F6F2 /* ISNAIPTV.app */;
@@ -485,8 +505,8 @@
 			);
 			mainGroup = D7A50DA529F1565800A9F6F2;
 			packageReferences = (
-				D79D1BA229F5BDF4005501FC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D79D1BA529F5BE01005501FC /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				3A8C42D12A288DD2003AFD66 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D7A50DAF29F1565800A9F6F2 /* Products */;
 			projectDirPath = "";
@@ -587,6 +607,7 @@
 				D76B957729F5A40100FA87CF /* MovieCategoryView.swift in Sources */,
 				D7A50E0729F15AD600A9F6F2 /* Color.swift in Sources */,
 				D7A50DD829F1583900A9F6F2 /* SerieInfo.swift in Sources */,
+				3AE3689F2A1B721200F54D25 /* AccountCell.swift in Sources */,
 				D76B957C29F5A40100FA87CF /* SerieCell.swift in Sources */,
 				D7A50E1029F1625300A9F6F2 /* AppView.swift in Sources */,
 				D76B957829F5A40100FA87CF /* SeasonView.swift in Sources */,
@@ -604,12 +625,14 @@
 				D7A50DDB29F1583900A9F6F2 /* MovieStream.swift in Sources */,
 				D76B958029F5A40100FA87CF /* Episode.swift in Sources */,
 				D76B957929F5A40100FA87CF /* SerieDetailsView.swift in Sources */,
+				3AE3689B2A1B575600F54D25 /* AccountsView.swift in Sources */,
 				D7A50DDA29F1583900A9F6F2 /* VodInfo.swift in Sources */,
 				D76B958629F5A40100FA87CF /* LiveTVCategory.swift in Sources */,
 				D7A50E0B29F15E2700A9F6F2 /* XtreamSession.swift in Sources */,
 				D7A50DE129F1599E00A9F6F2 /* LaunchscreenView.swift in Sources */,
 				D7A50DDF29F1583900A9F6F2 /* Category.swift in Sources */,
 				D76B958829F5A40100FA87CF /* TVView.swift in Sources */,
+				3AE3689D2A1B5A2700F54D25 /* AccountsViewModel.swift in Sources */,
 				D76B954629F5974800FA87CF /* XtreamManager.swift in Sources */,
 				D7A50DBE29F1565A00A9F6F2 /* ISNAIPTV.xcdatamodeld in Sources */,
 				D77246772A097932008A1482 /* XtreamConfig.swift in Sources */,
@@ -623,6 +646,7 @@
 				D76B958529F5A40100FA87CF /* LiveTVView.swift in Sources */,
 				D76B957529F5A40100FA87CF /* MovieDetailsView.swift in Sources */,
 				D76B956F29F5A40100FA87CF /* VideoPlayerView.swift in Sources */,
+				3AE368A12A1BA00C00F54D25 /* LoginView.swift in Sources */,
 				D76B958129F5A40100FA87CF /* Serie.swift in Sources */,
 				D76B957B29F5A40100FA87CF /* SerieDetailsViewModel.swift in Sources */,
 			);
@@ -833,7 +857,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D79D1BA229F5BDF4005501FC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		3A8C42D12A288DD2003AFD66 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
@@ -852,9 +876,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D79D1BA329F5BDF4005501FC /* Kingfisher */ = {
+		3A8C42D22A288DD2003AFD66 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D79D1BA229F5BDF4005501FC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 3A8C42D12A288DD2003AFD66 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 		D79D1BA629F5BE01005501FC /* Introspect */ = {

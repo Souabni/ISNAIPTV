@@ -31,8 +31,7 @@ struct SerieDetailsView: View {
                 
                 HStack(alignment: .top){
                     
-                    if let SerieImage = serieDetailsVM.selectedSerie.iconUrl, let SerieImageURL = URL(string:SerieImage){
-                        KFImage(SerieImageURL)
+                        KFImage(URL(string:serieDetailsVM.selectedSerie.iconUrl))
                             .placeholder {
                                 Image("placeholderSerie")
                                     .resizable()
@@ -43,8 +42,7 @@ struct SerieDetailsView: View {
                         
                             .frame(width:300, height: 400)
                        
-                    }
-                    
+
                     VStack(alignment:.leading,spacing:12){
                         HStack{
                             Text(serieDetailsVM.selectedSerie.name)
@@ -114,8 +112,8 @@ struct SerieDetailsView: View {
                     
                 }
                 HStack{
-                    if let serieSeasons = serieDetailsVM.selectedSerie.seasons, serieSeasons.count > 1{
-                        let sections = serieSeasons.map{$0.name}
+                    if serieDetailsVM.selectedSerie.seasons.count > 1{
+                        let sections = serieDetailsVM.selectedSerie.seasons.map{$0.name}
                         SeasonView(sections:sections, selectedSection: $serieDetailsVM.selectedSection)
                             .padding(.horizontal,-16)
                     }

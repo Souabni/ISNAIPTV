@@ -25,10 +25,9 @@ struct MainView: View {
                     SeriesView()
                 case .liveTV:
                     LiveTVView()
+                case .profils:
+                    AccountsView()
                 }
-                
-              
-                   
             }
             .navigationBarHidden(true)
             .ignoresSafeArea()
