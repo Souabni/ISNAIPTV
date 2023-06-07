@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LiveTVView: View {
-    @EnvironmentObject var currentSession : XtreamSession
+    @EnvironmentObject var xtreamManager : XtreamManager
     @StateObject var LiveTVVM : LiveTVViewModel =  LiveTVViewModel()
     @State var selectedCategoryIndex = 0
     
@@ -16,31 +16,34 @@ struct LiveTVView: View {
     var body: some View {
         GeometryReader{ geometry in
             HStack{
-                
-                ScrollView(.vertical, showsIndicators: false){
-                    VStack(spacing:16){
-                        ForEach(Array(zip(currentSession.liveTVsCategories.indices, currentSession.liveTVsCategories)), id: \.0) {index, category in
-                          
-                            Button{
-                                LiveTVVM.selectedCategory = category
-                                selectedCategoryIndex = index
-                            } label:{
-                                Text(category.title.uppercased())
-                                    .font(.custom(RobotoFont.bold.rawValue, size: 20))
+                if let currentSession = xtreamManager.xtreamSession {
+
+                    ScrollView(.vertical, showsIndicators: false){
+                        VStack(spacing:16){
+                            ForEach(Array(zip(currentSession.liveTVsCategories.indices, currentSession.liveTVsCategories)), id: \.0) {index, category in
+
+                                Button{
+                                    LiveTVVM.selectedCategory = category
+                                    selectedCategoryIndex = index
+                                } label:{
+                                    Text(category.title.uppercased())
+                                        .font(.custom(RobotoFont.bold.rawValue, size: 20))
+                                }
+                                .padding(.vertical, 15)
+                                .frame(width: 250)
+                                .foregroundColor(LiveTVVM.selectedCategory?.id == category.id ? Color.black : Color.white)
+                                .background( LiveTVVM.selectedCategory?.id == category.id ? Color.lightBlue : Color.darkBG)
+
                             }
-                            .padding(.vertical, 15)
-                            .frame(width: 250)
-                            .foregroundColor(LiveTVVM.selectedCategory?.id == category.id ? Color.black : Color.white)
-                            .background( LiveTVVM.selectedCategory?.id == category.id ? Color.lightBlue : Color.darkBG)
-                            
+                            Spacer()
                         }
-                        Spacer()
+                        .padding(.horizontal, 16)
+
                     }
-                    .padding(.horizontal, 16)
-                    
+                    .frame(width: 250)
+                    .padding(.top,50)
                 }
-                .frame(width: 250)
-                .padding(.top,50)
+
                 
                 
                 if  let selectedCategory = LiveTVVM.selectedCategory{
@@ -84,7 +87,7 @@ struct LiveTVView: View {
             .background(Color.darkBG)
         }
         .onAppear{
-            LiveTVVM.selectedCategory = currentSession.liveTVsCategories.first
+            LiveTVVM.selectedCategory = xtreamManager.xtreamSession?.liveTVsCategories.first
         }
         
     }
